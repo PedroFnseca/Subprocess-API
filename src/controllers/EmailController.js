@@ -12,7 +12,7 @@ route.post('/html',[
 ], async (req, res) => {
 
     const errors = validationResult(req)
-    if (!errors.isEmpty()) {
+    if(!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() })
     }
 
@@ -21,6 +21,34 @@ route.post('/html',[
     try {
 
         await nodeMailer.sendMailHTML(email, subject, html)
+
+        res.status(200).json({
+            message: 'Email sent'
+        })
+    } catch(error){
+        res.status(500).json({
+            message: 'Error sending email',
+            error
+        })
+    }
+})
+
+// Endpoint para enviar email com texto simples
+route.post('/text',[
+    body('email').isEmail().withMessage('Email inválido'),
+    body('subject').isString().withMessage('Assunto inválido'),
+    body('text').isString().withMessage('Texto inválido')
+], async (req, res) => {
+
+    const errors = validationResult(req)
+    if(!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() })
+    }
+
+    const { email, subject, text } = req.body
+
+    try {
+        await nodeMailer.sendMailText(email, subject, text)
 
         res.status(200).json({
             message: 'Email sent'
