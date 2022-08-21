@@ -1,7 +1,7 @@
 import db from '../database/config.js'
 import email from '../email/config.js'
 
-// Verifica os emprestimos que estão proximos ao vencimento
+// Verifica os emprestimos que estão proximos ao vencimento de 1 dia
 async function checkLendingBook() {
     const conn = await db.connect()
     const [rows] = await conn.query('SELECT * FROM VW_lending_CloseToDate_1')
@@ -41,10 +41,10 @@ async function sendMAil(lending){
     const return_prediction_day = getDayOfWeek(return_prediction.getDay())
 
     const to = user_email
-    const subject = `Emprestimo de livro ${book_name} proximo ao vencimento`
+    const subject = `Empréstimo de livro ${book_name} proximo ao vencimento`
     const html = `
-        <h1>Olá ${user_name}</h1>
-        <p>O livro: ${book_name}, está proximo ao vencimento.</p>
+        <h1>Olá, ${user_name}</h1>
+        <p>O livro: ${book_name}, está próximo ao vencimento.</p>
         <p>A data de devolução é de até ${return_prediction_formatted} na ${return_prediction_day}</p>
         <p>O código do empréstimo: ${lending_code}</p>
         <p> Att, Equipe Etec Embu - Jade Biblioteca</p>
@@ -61,12 +61,12 @@ async function lendindCloseToDate(){
 
     const rows = await checkLendingBook()
 
-    // Envia email para todos os usuaarios com livros proximos ao vencimento
+    // Envia email para todos os usuarios com livros proximos ao vencimento
     for(const lending of rows){
         await sendMAil(lending)
     }
 }
 
-export default {
+export {
     lendindCloseToDate
 }
