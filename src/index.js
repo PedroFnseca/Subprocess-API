@@ -1,6 +1,6 @@
+import lendingBook from './service/lendingBook.js'
 
-
-// Faz o o código funcionar a cada 10 segundos
+// Faz o código acordar a cada 10 segundos
 setInterval(() => {
-    console.log('Hello World');
+    console.log('Hello World')
 }, 10000);
