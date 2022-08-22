@@ -1,5 +1,5 @@
 # Backend auxiliar 🛠️
-> ### Feita para auxiliar uma api principal, e realizar processos de rotina, registrando multa em caso de atraso de devolução e enviando email para empréstimos próximos da data de devolução avisando o usuário.
+> ### Feita para auxiliar uma [API principal](https://github.com/IntecEmbu/Biblioteca-backend), e realizar processos de rotina, registrando multa em caso de atraso de devolução e enviando email para empréstimos próximos da data de devolução avisando o usuário.
 
 <br>
 
