@@ -1,13 +1,5 @@
-import db from '../database/config.js'
+import {checkLendingBook1} from '../database/lending.js'
 import email from '../email/config.js'
-
-// Verifica os emprestimos que estão proximos ao vencimento de 1 dia
-async function checkLendingBook() {
-    const conn = await db.connect()
-    const [rows] = await conn.query('SELECT * FROM VW_lending_CloseToDate_1')
-    conn.end()
-    return rows
-}
 
 // Função que gera o dia da semana em portugues
 function getDayOfWeek(day){
@@ -59,7 +51,7 @@ async function sendMAil(lending){
 // Recebe o emprestimo e envia email para o usuario
 async function lendindCloseToDate(){
 
-    const rows = await checkLendingBook()
+    const rows = await checkLendingBook1()
 
     // Envia email para todos os usuarios com livros proximos ao vencimento
     for(const lending of rows){
