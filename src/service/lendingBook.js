@@ -1,5 +1,4 @@
 import {checkLendingBook1} from '../database/lending.js'
-import {sendMailHTML} from '../email/sendMail.js'
 
 // Função que gera o dia da semana em portugues
 function getDayOfWeek(day){
@@ -45,7 +44,7 @@ async function sendMAil(lending){
     `
 
     // Comentado para não enviar email
-    // await sendMailHTML(to, subject, html)
+    // enviar pela api externa
 }
 
 // Recebe o emprestimo e envia email para o usuario
