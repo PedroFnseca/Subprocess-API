@@ -1,4 +1,3 @@
-
 function emailTemplate(title, name, message) {
     return `<!DOCTYPE html>
     <html lang="pt-br">
@@ -6,7 +5,6 @@ function emailTemplate(title, name, message) {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Bem-vindo</title>
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
         * {
@@ -82,4 +80,4 @@ function emailTemplate(title, name, message) {
     </html>` 
   }
   
-  export default emailTemplate
+export default emailTemplate
