@@ -1,4 +1,6 @@
 import {checkLendingBook1} from '../database/lending.js'
+import closeToDateEmail from '../email/closeToDateEmail.js'
+import sendEmail from './sendMail.js'
 
 // Função que gera o dia da semana em portugues
 function getDayOfWeek(day){
@@ -32,19 +34,10 @@ async function sendMAil(lending){
     const return_prediction_day = getDayOfWeek(return_prediction.getDay())
 
     const to = user_email
-    const subject = `Empréstimo de livro ${book_name} proximo ao vencimento`
-    const html = `
-        <h1>Olá, ${user_name}</h1>
-        <p>O livro: ${book_name}, está próximo ao vencimento.</p>
-        <p>A data de devolução é de até ${return_prediction_formatted} na ${return_prediction_day}</p>
-        <p>O código do empréstimo: ${lending_code}</p>
-        <p> Att, Equipe Etec Embu - Jade Biblioteca</p>
-        <br>
-        <p>Este é um email automático, não responda!</p>
-    `
+    const subject = `Empréstimo do livro ${book_name} próximo ao vencimento`
+    const html = closeToDateEmail(user_name, book_name, return_prediction_formatted, return_prediction_day)
 
-    // Comentado para não enviar email
-    // enviar pela api externa
+    // sendEmail(to, subject, html)
 }
 
 // Recebe o emprestimo e envia email para o usuario
