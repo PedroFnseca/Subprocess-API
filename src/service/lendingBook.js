@@ -1,5 +1,5 @@
 import {checkLendingBook1} from '../database/lending.js'
-import closeToDateEmail from '../email/closeToDateEmail.js'
+import closeToDateEmail from '../mail/closeToDate.js'
 import sendEmail from './sendMail.js'
 
 // Função que gera o dia da semana em portugues

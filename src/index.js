@@ -23,7 +23,7 @@ setInterval(async () => {
     // verifica se a hora atual é a hora de verificar os empréstimos
     if((now.getHours() === parseInt(process.env.HOUR_TO_VERIFY_LENDING))){
         console.log('║\t▪ Iniciando verificações de empréstimos\t\t║')
-        await verifyLendingBook()
+        // await verifyLendingBook()
         console.log('║\t◻ Verificações de empréstimos concluidas\t║')
         console.log('║\t\t\t\t\t\t\t║')
     } else {
@@ -33,7 +33,7 @@ setInterval(async () => {
 
     if((now.getHours() === parseInt(process.env.HOUR_TO_VERIFY_PENALTY))){
         console.log('║\t▪ Iniciando verificações de multas\t\t║')
-        verifyPenalty()
+        // verifyPenalty()
         console.log('║\t◻ Verificações de multas concluidas\t\t║')
     } else {
         console.log(`║\t⊙ As multas serão verificadas às ${process.env.HOUR_TO_VERIFY_PENALTY}:00\t\t║`)
