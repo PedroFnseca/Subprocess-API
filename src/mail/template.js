@@ -71,8 +71,7 @@ function emailTemplate(title, name, message) {
         </div>
         <div class="email-footer">
           <div class="email-footer-container">
-            <span class="msg-footer">Por favor, pedimos que você não responda esse e-mail, pois se trata de uma mensagem
-              automática.</span>
+            <span class="msg-footer">Este é um e-mail automático, por favor, não responda.</span>
           </div>
         </div>
       </div>
