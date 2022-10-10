@@ -1,5 +1,7 @@
 # Backend auxiliar 🛠️
 
+> ### Este projeto faz parte de um sistema principal que gerencia biblioteca: [backend](https://github.com/IntecEmbu/Biblioteca-backend) e [frontend](https://github.com/IntecEmbu/Biblioteca-frontend)
+
 ## Como funciona 🤔
 
 ### De forma resumida, o backend auxiliar realiza as seguintes tarefas:
