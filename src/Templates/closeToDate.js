@@ -1,4 +1,4 @@
-import emailTemplate from "./template.js";
+import emailTemplate from "./main.js";
 
 function closeToDateEmail(
   user_name,
