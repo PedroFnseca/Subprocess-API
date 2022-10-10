@@ -50,3 +50,8 @@ EMAIL_PWD_APP=   # Senha email
 <img src="https://img.shields.io/badge/-Nodemailer-CC3534?style=flat-square&logo=Nodemailer&logoColor=white">
 <img src="https://img.shields.io/badge/-Mysql-4479A1?style=flat-square&logo=Mysql&logoColor=white">
 </p>
+
+## Projetos relacionados 📁
+
+- ### [Backend](https://github.com/IntecEmbu/Biblioteca-backend) - API REST desenvolvida em NodeJS.
+- ### [Frontend](https://github.com/IntecEmbu/Biblioteca-frontend) - Aplicação web desenvolvida em ReactJS.
