@@ -1,21 +1,50 @@
 # Backend auxiliar 🛠️
-> ### Feita para auxiliar uma [API principal](https://github.com/IntecEmbu/Biblioteca-backend), e realizar processos de rotina, registrando multa em caso de atraso de devolução e enviando email para empréstimos próximos da data de devolução avisando o usuário.
-
-<br>
 
 ## Como funciona 🤔
 
-### De tempos em tempos, o algoritmo irá acordar e verificar se precisa realizar as suas funções. Ele avisará se está na hora de fazer ou não.
-<p align="center">
-<img src="https://user-images.githubusercontent.com/97262778/185815125-41c8a912-8293-4bc9-9a23-222f1ebeccc1.png">
-</p>
+### De forma resumida, o backend auxiliar realiza as seguintes tarefas:
 
-### Quando ele verificar que é o horario de verificar os livros próximos a serem devolvidos ele irá enviar e-mail para todos os usuários nescessarios e apresentar a seguinte imagem.
-<p align="center">
-<img src="https://user-images.githubusercontent.com/97262778/185815465-ef9cd46e-1071-4139-b0a7-c7982f20069c.png">
-</p>
+- Registrar multa em caso de atraso de devolução.
+- Enviar email para empréstimos atrasados avisando o usuário.
+- Enviar email para empréstimos próximos da data de devolução avisando o usuário.
 
-### E finalmente quando ele verificar que é a hora de aplicar as multas em atrasos de devolução na data correta,irá fazer o processamento e apresentar a seguinte imagem.
+<br>
+
+## Como usar 🤓
+
+### Para usar o backend auxiliar, é necessário ter o [Node.js](https://nodejs.org/en/) instalado em sua máquina. Após isso, siga os passos abaixo:
+
+- Clone o repositório em sua máquina.
+- Abra o terminal na pasta do projeto e execute o comando `npm install` para instalar as dependências.
+- Crie um arquivo `.env` na raiz do projeto e preencha as variáveis de ambiente com os dados do seu banco de dados e do seu servidor de email. Segue um exemplo de como deve ficar o arquivo:
+
+```bash
+DB_HOST=         # Host do banco de dados
+DB_NAME=         # Nome do banco de dados
+DB_USER=         # Usuário do banco de dados
+DB_PWD=          # Senha do banco de dados
+DB_PORT=         # Porta do banco de dados
+
+EMAIL_URL=       # URL do servidor de email
+EMAIL_PWD_APP=   # Senha email
+```
+
+- Execute o comando `npm start` para iniciar o servidor.
+
+<br>
+
+## Como irá ficar no seu terminal 🖥️
+
 <p align="center">
-<img src="https://user-images.githubusercontent.com/97262778/185815592-0fa3985d-0a6c-4ef6-bdcd-8fa4f24003b8.png">
-</p>
+<!-- Imagem aqui -->
+<p>
+
+<br>
+
+## Tecnologias utilizadas 🛠️
+
+<p align="center">
+<img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">
+<img src="https://img.shields.io/badge/-Nodemailer-CC3534?style=flat-square&logo=Nodemailer&logoColor=white">
+<img src="https://img.shields.io/badge/-Mysql-4479A1?style=flat-square&logo=Mysql&logoColor=white">
+<p>
