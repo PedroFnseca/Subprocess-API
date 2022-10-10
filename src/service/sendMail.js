@@ -1,33 +1,33 @@
-import nodeMailer from 'nodemailer'
-import dotenv from 'dotenv'
+import nodeMailer from "nodemailer";
+import dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 
 // Cria um transporter para o envio de emails
-function createTransporter(){
+function createTransporter() {
   return nodeMailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PWD_APP
+      pass: process.env.EMAIL_PWD_APP,
     },
     tls: {
-      rejectUnauthorized: false
-    }
-  })
+      rejectUnauthorized: false,
+    },
+  });
 }
 
-async function sendEmail(to, subject, html){
-    const transporter = createTransporter()
+async function sendEmail(to, subject, html) {
+  const transporter = createTransporter();
 
-    return transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to,
-        subject,
-        html
-    })
+  return transporter.sendMail({
+    from: process.env.EMAIL_USER,
+    to,
+    subject,
+    html,
+  });
 }
 
-export default sendEmail
+export default sendEmail;

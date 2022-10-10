@@ -1,5 +1,5 @@
 function emailTemplate(title, name, message) {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
     <html lang="pt-br">
     <head>
       <meta charset="UTF-8">
@@ -76,7 +76,7 @@ function emailTemplate(title, name, message) {
         </div>
       </div>
     </body>
-    </html>` 
-  }
-  
-export default emailTemplate
+    </html>`;
+}
+
+export default emailTemplate;
