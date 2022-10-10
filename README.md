@@ -36,10 +36,8 @@ EMAIL_PWD_APP=   # Senha email
 ## Como irá ficar no seu terminal 🖥️
 
 <p align="center">
-<!-- Imagem aqui -->
-<p>
-
-<br>
+<img src="https://user-images.githubusercontent.com/97262778/194789313-58726d12-a23a-47b8-b947-e003d125ed4e.png">
+</p>
 
 ## Tecnologias utilizadas 🛠️
 
@@ -47,4 +45,4 @@ EMAIL_PWD_APP=   # Senha email
 <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=Node.js&logoColor=white">
 <img src="https://img.shields.io/badge/-Nodemailer-CC3534?style=flat-square&logo=Nodemailer&logoColor=white">
 <img src="https://img.shields.io/badge/-Mysql-4479A1?style=flat-square&logo=Mysql&logoColor=white">
-<p>
+</p>
