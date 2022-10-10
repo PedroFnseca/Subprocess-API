@@ -14,9 +14,9 @@
 
 ### Para usar o backend auxiliar, é necessário ter o [Node.js](https://nodejs.org/en/) instalado em sua máquina. Após isso, siga os passos abaixo:
 
-- Clone o repositório em sua máquina.
-- Abra o terminal na pasta do projeto e execute o comando `npm install` para instalar as dependências.
-- Crie um arquivo `.env` na raiz do projeto e preencha as variáveis de ambiente com os dados do seu banco de dados e do seu servidor de email. Segue um exemplo de como deve ficar o arquivo:
+- #### Clone o repositório em sua máquina.
+- #### Abra o terminal na pasta do projeto e execute o comando `npm install` para instalar as dependências.
+- #### Crie um arquivo `.env` na raiz do projeto e preencha as variáveis de ambiente com os dados do seu banco de dados e do seu servidor de email. Segue um exemplo de como deve ficar o arquivo:
 
 ```bash
 DB_HOST=         # Host do banco de dados
@@ -29,14 +29,16 @@ EMAIL_URL=       # URL do servidor de email
 EMAIL_PWD_APP=   # Senha email
 ```
 
-- Execute o comando `npm start` para iniciar o servidor.
+- #### Execute o comando `npm start` para iniciar o servidor.
 
 <br>
 
 ## Como irá ficar no seu terminal 🖥️
 
+#### O algoritmo irá rodar a cada 1 hora e verificará se há empréstimos atrasados ou próximos da data de devolução. Caso haja, será enviado um email para o usuário avisando sobre o atraso ou a data de devolução. Além de registrar a multa no banco de dados.
+
 <p align="center">
-<img src="https://user-images.githubusercontent.com/97262778/194789313-58726d12-a23a-47b8-b947-e003d125ed4e.png">
+<img src="https://user-images.githubusercontent.com/97262778/194789313-58726d12-a23a-47b8-b947-e003d125ed4e.png"/>
 </p>
 
 ## Tecnologias utilizadas 🛠️
